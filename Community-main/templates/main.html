@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="{% static 'images/icons8-mentor-16.ico' %}" />
+  <link rel="stylesheet" href="{% static 'styles/style.css'%}" />
+  <title>MentorCafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="{%static 'images/icons8-mentor-16.png' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- <script id="replace_with_navbar" src="nav.js"></script> -->
+  <!-- <script>
+    function show() {
+        var x = document.getElementById('dropdown-menu');
+        if (x.style.display == 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+</script> -->
+
+{% include 'navbar.html'%}
+
+    {% if messages%}
+    <ul class = "messages">
+        {% for message in messages%}
+        <li>{{message}}</li>
+        {%endfor%}
+    </ul>
+    {%endif%}
+
+    {% block content%}
+
+    {%endblock%}
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
