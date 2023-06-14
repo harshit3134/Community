@@ -1,2 +1,2 @@
-# SGP2
+#Community
 Community (updated)
